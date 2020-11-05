@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LottieDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lcd-Z4-NkS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="huz-Hg-uCg">
+                                    <size key="itemSize" width="383" height="769"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="BHt-0j-Nr5" customClass="OnboardingCollectionViewCell" customModule="LottieDemo" customModuleProvider="target">
+                                        <rect key="frame" x="15.5" y="0.0" width="383" height="769"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jvN-hk-NBb">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="769"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4NE-os-k05">
+                                                    <rect key="frame" x="0.0" y="129" width="383" height="511"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OX-He-ySk" customClass="AnimationView" customModule="Lottie">
+                                                            <rect key="frame" x="0.0" y="0.0" width="383" height="383"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="6OX-He-ySk" secondAttribute="height" multiplier="1:1" id="pAY-v4-5Zb"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c43-b2-i2S">
+                                                            <rect key="frame" x="0.0" y="383" width="383" height="128"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Practice mindfulness during the breaks of your schedule" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSc-KO-Wmf">
+                                                                    <rect key="frame" x="36" y="24" width="311" height="80"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="WSc-KO-Wmf" secondAttribute="bottom" constant="24" id="Vls-er-FZz"/>
+                                                                <constraint firstAttribute="trailing" secondItem="WSc-KO-Wmf" secondAttribute="trailing" constant="36" id="b3f-m7-yho"/>
+                                                                <constraint firstItem="WSc-KO-Wmf" firstAttribute="top" secondItem="c43-b2-i2S" secondAttribute="top" constant="24" id="hti-IY-bQK"/>
+                                                                <constraint firstItem="WSc-KO-Wmf" firstAttribute="leading" secondItem="c43-b2-i2S" secondAttribute="leading" constant="36" id="oVj-8P-DmJ"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4NE-os-k05" firstAttribute="centerY" secondItem="jvN-hk-NBb" secondAttribute="centerY" id="CwB-FE-ifD"/>
+                                                <constraint firstItem="4NE-os-k05" firstAttribute="leading" secondItem="jvN-hk-NBb" secondAttribute="leading" id="VFq-WH-KYJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="4NE-os-k05" secondAttribute="trailing" id="uzb-6t-J5M"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="383" height="769"/>
+                                        <connections>
+                                            <outlet property="animationView" destination="6OX-He-ySk" id="FhI-Jz-mTd"/>
+                                            <outlet property="titleLabel" destination="WSc-KO-Wmf" id="JTe-BV-3E6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-92-ZxR">
+                                <rect key="frame" x="36" y="814.5" width="342" height="27.5"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wos-0D-K4f">
+                                <rect key="frame" x="316" y="84" width="68" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="Gn4-Kf-hMS"/>
+                                    <constraint firstAttribute="height" constant="30" id="u8a-aR-bSB"/>
+                                </constraints>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kpg-92-ZxR" secondAttribute="trailing" constant="36" id="DiY-Rz-aDe"/>
+                            <constraint firstItem="kpg-92-ZxR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Djh-EF-QJO"/>
+                            <constraint firstAttribute="bottom" secondItem="Lcd-Z4-NkS" secondAttribute="bottom" id="LQ0-0I-tIg"/>
+                            <constraint firstItem="Lcd-Z4-NkS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Quy-vx-guv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wos-0D-K4f" secondAttribute="trailing" constant="30" id="Sz7-Fj-gmR"/>
+                            <constraint firstItem="Lcd-Z4-NkS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aDX-Nw-dnn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kpg-92-ZxR" secondAttribute="bottom" constant="20" id="bzD-cR-eGU"/>
+                            <constraint firstAttribute="trailing" secondItem="Lcd-Z4-NkS" secondAttribute="trailing" id="dmi-eQ-C4T"/>
+                            <constraint firstItem="wos-0D-K4f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="yux-bh-V0Q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Lcd-Z4-NkS" id="QQV-9q-HUw"/>
+                        <outlet property="pageControl" destination="kpg-92-ZxR" id="2ea-4u-dqs"/>
+                        <outlet property="skipButton" destination="wos-0D-K4f" id="oMG-4p-Hr8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6OX-He-ySk"/>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
